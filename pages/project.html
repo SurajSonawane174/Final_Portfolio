@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="../style/project.css">
+
+</head>
+
+<body>
+    <a href="index.html" target="_blank" class="circle">
+        <span class="text-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </span>
+        <!-- <span class="span-text">Home</span> -->
+    </a>
+    <section class="py-16 pb-300px bg-gradient">
+        <div class="container text-center">
+            <h1 class="title">Featured Projects</h1>
+            <p class="subtitle">Check out My latest works</p>
+        </div>
+        <div class="card-container">
+            <div class="card" onclick="handleCardClick(0)" style="background-image: url('../src/projects/port.png' )">
+                <div class="card-content">
+                    <div class="card-footer">
+                        <h2>PORTFOLIO</h2>
+                        <p class="description">"Detailed Look at My Portfolio Website Creation"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="handleCardClick(1)" style="background-image: url('../src/projects/aarambh.png')">
+                <div class="card-content">
+                    <div class="card-footer">
+                        <h2>AARAMBH STUDIO'S</h2>
+                        <p class="description">"Experience the artistry of AARAMBH STUDIO through a sleek and intuitive website that beautifully showcases a diverse portfolio of captivating photography."</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" onclick="handleCardClick(2)" style="background-image: url('../src/projects/port2.png')">
+                <div class="card-content">
+                    <div class="card-footer">
+                        <h2>PORTFOLIO</h2>
+                        <p class="description">"Detailed Look at My Portfolio Website Creation"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="handleCardClick(3)" style="background-image: url('../src/projects/amazon.png')">
+                <div class="card-content">
+                    <div class="card-footer">
+                        <h2>AMAZON CLONE 4</h2>
+                        <p class="description">Developing the Clone Website of the Amazon using HTML, CSS, JS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="handleCardClick(4)" style="background-image: url('../src/projects/tictactoe.png')">
+                <div class="card-content">
+                    <div class="card-footer">
+                        <h2>GAME</h2>
+                        <p class="description">TIC-TAC-TOE Game</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../script/project.js"></script>
+
+
+</body>
+
+</html>

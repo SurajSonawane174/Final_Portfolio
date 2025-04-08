@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="../style/contact.css" />
+</head>
+<body>
+  <div class="background">
+    <!-- Logo -->
+    <a href="index.html" class="circle reveal-logo">
+      <span class="text-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9L12 2l9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </span>
+     
+    </a>
+
+    <!-- Heading -->
+    <div class="heading reveal-heading">Contact <span>Form</span></div>
+
+    <!-- Contact Form -->
+    <div class="content-container reveal-form">
+      <div class="contact-form-container">
+        <form action="https://formspree.io/f/yourformid" method="POST" id="contactForm">
+          <input class="name" type="text" name="name" placeholder="Name" required />
+          <input class="mail" type="email" name="email" placeholder="Email" required />
+          <textarea class="mesg" name="message" placeholder="Message" required></textarea>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="../script/contact.js"></script>
+</body>
+</html>

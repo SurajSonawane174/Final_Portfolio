@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  :root {
+    --bg-color: #1f242d;
+    --main-color: #0ef;
+    --bg-color-trans: rgba(31, 36, 45, 0.5);
+  }
+  
+  /* Background */
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../src/backgrounds/bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  
+  /* Heading */
+  .heading {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .heading span {
+    color: var(--main-color);
+  }
+  
+  /* Circle Logo */
+  .circle {
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: var(--main-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 1rem;
+    right: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .circle:hover {
+    background-color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    color: var(--bg-color);
+    border: none;
+  }
+  
+  .text-logo {
+    left: 50%;
+  }
+  
+  .span-text {
+    position: absolute;
+    left: 4rem;
+    display: none;
+    padding: 5px 10px;
+    background-color: #919597;
+    color: white;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+  }
+  
+  .circle:hover .span-text {
+    display: block;
+  }
+  
+  /* Form Container */
+  .content-container {
+    width: 40%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-form-container {
+    width: 90%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #ddd;
+  }
+  
+  button {
+    background-color: var(--main-color);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00c6c6;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .content-container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .circle {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  
+    .span-text {
+      font-size: 0.8rem;
+      left: 3rem;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,557 @@
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text--color: #fff;
+  --main-color: #0ef;
+  --bg-color-trans: rgba(31, 36, 45, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.main-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: url('../src/backgrounds/main-bg.webp') center center/cover no-repeat;
+}
+
+.content-container {
+  padding-left: 20px;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+  max-width: 750px;
+}
+
+.title {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hello {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.myname {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.skillnames {
+  font-size: 2.4rem;
+}
+
+.intro {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.multi-text {}
+
+.gradient-text {
+  background: linear-gradient(to right, #7e5bef, #f76a6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-media {
+  width: fit-content;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 7px;
+  transition: 0.5s ease;
+  font-size: 1.5rem;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+
+.description {
+  color: #cccccc;
+  display: none;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: .5rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.mobile{
+  /* position: absolute; */
+}
+.mobile {
+  width: fit-content;
+}
+
+.mobile a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 7px;
+  transition: 0.5s ease;
+  font-size: 1.5rem;
+}
+
+.mobile a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.mobile a{
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid aqua;
+}
+.mobile a .bx{
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .description {
+    display: block;
+  }
+}
+
+.buttons-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+
+.button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  max-width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.learn-more {
+  background-color: #007bff;
+  color: white;
+}
+
+.learn-more:hover {
+  background-color: #0069d9;
+}
+
+.my-projects,
+.contact-me {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  position: relative;
+}
+
+.my-projects::before,
+.contact-me::before {
+  content: '';
+  position: absolute;
+  background-color: white;
+  inset: 0;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.my-projects:hover::before,
+.contact-me:hover::before {
+  opacity: 0.2;
+}
+
+.mobile-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .mobile-buttons {
+    display: none;
+  }
+}
+
+.image-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.horse-image {
+  position: absolute;
+  right: 55px;
+  top: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+.cliff-image {
+  width: 480px;
+  height: 480px;
+}
+
+.trees-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.trees-image {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.stars-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 300px;
+  height: 300px;
+}
+
+
+
+
+
+.circle {
+  height: 3.5rem;
+  width: 3.5rem;
+  color: aqua;
+  border: 1px solid black;
+  position: absolute;
+  border-radius: 50%;
+  animation: circularMotion 16s linear infinite, fadeIn 1s linear forwards;
+  transition: .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  top: 1rem;
+  right: 1rem;
+  /* background-color: black; */
+  z-index: 50;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.circle:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  border: none;
+
+}
+
+.circle:hover .span-text {
+  display: block;
+  transition: .5s ease;
+}
+
+.text-logo {
+  /* position: absolute; */
+  left: 50%;
+  /* top: 50%; */
+}
+
+.span-text {
+  position: absolute;
+  left: 4rem;
+  display: none;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  color: #0ef;
+  /* background-color: rgba(19, 19, 19, 0.1); */
+  background-color: #919597;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  font-size: 1rem;
+  /* text-decoration: underline; */
+  text-decoration-color: #0ef;
+  transition: all;
+}
+
+@media (max-width:1023px) {
+  .social-media {
+    /* display: none; */
+    /* display: hidden; */
+  }
+
+  .description {
+    width: 50vw;
+    display: block;
+  }
+
+  .hello {
+    font-size: 2rem;
+    font-weight: 600;
+
+  }
+
+  .myname {
+    font-size: 3rem;
+    font-weight: 700;
+
+  }
+
+}
+
+@media (max-width:968px) {
+
+  .buttons-container {
+    display: none;
+
+  }
+  .social-media{
+    display: none;
+  }
+
+  .mobile-buttons {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+
+  }
+
+}
+
+@media (max-width:768px) {
+
+
+
+  .hello {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .myname {
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+
+  .skillnames {
+    font-size: 2rem;
+  }
+
+  .intro {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .description {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:500px) {
+
+
+  .image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 6;
+  }
+
+  .horse-image {
+    position: absolute;
+    right: 55px;
+    top: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .cliff-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width:500px) {
+
+  .description {
+    display: none;
+  }
+
+  .mobile-buttons {
+    font-size: 1rem;
+
+  }
+
+}
+
+@media (max-width:320px) {
+
+  .description {
+    display: none;
+  }
+
+  .mobile-buttons {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+
+
+.mobile a{
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 1px solid aqua;
+}
+.mobile a .bx{
+  font-size: .8rem;
+}
+
+  .mobile-buttons a {
+    font-size: .8rem;
+    margin: 0;
+    padding: 3px;
+
+
+  }
+
+  .hello {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .myname {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .skillnames {
+    font-size: 1rem;
+  }
+
+  .intro {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+
+}
+
